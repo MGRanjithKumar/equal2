@@ -1,0 +1,33 @@
+{% extends "progress.html" %}
+
+{% block progress %}
+<h3>Question {{qn_number}} :</h3>
+<h4>The sum of the series $4+44+444+4444+..... is$</h4>
+
+<form action="/game" method="POST" >
+	<!-- <fieldset> -->
+		<h3>Options : </h3>
+		<input type="hidden" name="qn_number" value={{qn_number}}> 
+	    <div class="funkyradio" style="text-align:center">
+	        <div class="funkyradio-primary" >
+	            <input type="radio" name="radio" id="radio1" value=1 required>
+	            <label class="mathEqns" for="radio1">$\frac{4}{81}[10^{n+1}-9n-1]$</label>
+	        </div>
+	        <div class="funkyradio-primary">
+	            <input type="radio" name="radio" id="radio2" value=2 >
+	            <label class="mathEqns" for="radio2">$\frac{4}{81}[10^{n-1}-9n-1]$</label>
+	        </div>
+	        <div class="funkyradio-primary">
+	            <input type="radio" name="radio" id="radio3" value=3 >
+	            <label class="mathEqns" for="radio3">$\frac{4}{81}[10^{n+1}-9n-10]$</label>
+	        </div>
+	        <div class="funkyradio-primary" >
+	            <input type="radio" name="radio" id="radio4" value=4 >
+	            <label class="mathEqns" for="radio4">$\frac{4}{81}[10^{n}-9n-10]$</label>
+	        </div>
+	    </div>
+	    
+	<!-- </fieldset> -->
+
+
+{% endblock%}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content%}
+<div style="background: rgba(0,0,0,0.9);color: white;" class="jumbotron container">
+	<h4 style="color: white">You have Successfully Registered!!!</h4>
+	<h4 style="color: white">Your Vision ID is {{VID}}</h4>
+	<div>
+        <h2 class="text-center">Rules</h2>
+        <hr><br>
+        <ul class="text-justify" style="font-family: Verdana;font-weight:bold;">
+            <li>The Event is based on only mathematics and a little of logical thinking</li>
+            <li>The Event consists of 15 questions and you have to finish them with in allocated time</li>
+            <li>You have to enter the event within allocated time window</li>
+            <li>This is a Single round online event</li>
+            <li> <b>Don't use back button in browser while answering quiz</b> </li>
+            <li>You cannot skip between the questions</li>
+            <li>You can submit answer only once for a question</li>
+            <li>Your answers are recorded automatically when you click NEXT button</li>
+            <li>No negative marking</li>
+            <li> <b>You need to sign in with your google account</b> </li>
+            <li>Judges decision is final and binding</li>
+        </ul>
+        <br><br>
+    </div>
+	<a class="btn btn-lg btn-success" href="configureGame" role="button">Click to Start    <span class="glyphicon glyphicon-time"></span></a>
+</div>
+{% endblock %}

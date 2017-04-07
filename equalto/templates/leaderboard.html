@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="background: rgba(0,0,0,0.7);color: white" class="container mobilePageOffset">
+
+	<table class = "table">
+	   <caption><h3>Leaderboard</h3></caption>
+	   
+	   <thead>
+	      <tr>
+	         <th class="text-center"><p>S.No</p></th>
+	         <th class="text-center"><p>Email</p></th>
+	         <th class="text-center"><p>Score</p></th>
+	      </tr>
+	   </thead>
+	   
+	   <tbody>
+	   	 {% for leader in leaderboardList %}	      
+	      <tr class = "text-center">
+	      	 <td><p>{{leader['sNo']}}</p></td>
+	         <td><p>{{leader['email']}}</p></td>
+	         <td><p>{{leader['score']}}</p></td>
+	      </tr>
+	     {% endfor %}
+	   </tbody>	 
+
+	</table>	
+	<div class="text-center">
+	{% if prev!=-1 %}
+	<a class="btn btn-sm btn-danger" href="/leaderboard{{prev}}" ><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+	{% endif %}
+	<a class="btn btn-danger" href="/leaderboard{{page}}" >Page {{page}}</a>
+	{% if next!=-1 %}
+	<a class="btn btn-sm btn-danger" href="/leaderboard{{next}}" ><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+	{% endif %}
+	</div>
+	<br><br>
+</div>
+{% endblock %}

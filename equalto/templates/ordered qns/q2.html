@@ -1,0 +1,33 @@
+{% extends "progress.html" %}
+
+{% block progress %}
+<h3>Question {{qn_number}} :</h3>
+<h4>The sum of the digits of a two digit number is 9 . The fraction formed by taking 9 less then the number as numerator and 9 more than the number as denominator is $\frac{3}{4}$. Find the numbers</h4>
+
+<form action="/game" method="POST" >
+	<!-- <fieldset> -->
+		<h3>Options : </h3>
+		<input type="hidden" name="qn_number" value={{qn_number}}> 
+	    <div class="funkyradio" style="text-align:center">
+	        <div class="funkyradio-primary" >
+	            <input type="radio" name="radio" id="radio1" value=1 required>
+	            <label for="radio1">$54$</label>
+	        </div>
+	        <div class="funkyradio-primary">
+	            <input type="radio" name="radio" id="radio2" value=2 >
+	            <label for="radio2">$45$</label>
+	        </div>
+	        <div class="funkyradio-primary">
+	            <input type="radio" name="radio" id="radio3" value=3 >
+	            <label for="radio3">$63$</label>
+	        </div>
+	        <div class="funkyradio-primary" >
+	            <input type="radio" name="radio" id="radio4" value=4 >
+	            <label for="radio4">$36$</label>
+	        </div>
+	    </div>
+	    
+	<!-- </fieldset> -->
+
+
+{% endblock%}

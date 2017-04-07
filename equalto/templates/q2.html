@@ -1,0 +1,38 @@
+{% extends "progress.html" %}
+
+{% block progress %}
+<h3>Question {{qn_number}} :</h3>
+<h4 class="quesTion">Each of P,Q,R,S and T belong to different profession among - teacher,doctor,lawyer,police officer and banker:<br>
+a) P is the police officer<br>
+b) Q is neither the doctor nor the lawyer<br>
+c) R is the teacher<br>
+d) S is neither the banker nor the lawyer<br>
+Who among them is the banker?</h4>
+
+<form action="/game" method="POST" >
+	<!-- <fieldset> -->
+		<h3>Options : </h3>
+		<input type="hidden" name="qn_number" value={{qn_number}}> 
+	    <div class="funkyradio" style="text-align:center">
+	        <div class="funkyradio-primary" >
+	            <input type="radio" name="radio" id="radio1" value=1 required>
+	            <label for="radio1">T</label>
+	        </div>
+	        <div class="funkyradio-primary">
+	            <input type="radio" name="radio" id="radio2" value=2 >
+	            <label for="radio2">Q</label>
+	        </div>
+	        <div class="funkyradio-primary">
+	            <input type="radio" name="radio" id="radio3" value=3 >
+	            <label for="radio3">Q or T</label>
+	        </div>
+	        <div class="funkyradio-primary" >
+	            <input type="radio" name="radio" id="radio4" value=4 >
+	            <label for="radio4">None of the above</label>
+	        </div>
+	    </div>
+	    
+	<!-- </fieldset> -->
+
+
+{% endblock%}

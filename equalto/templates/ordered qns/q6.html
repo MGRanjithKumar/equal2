@@ -1,0 +1,36 @@
+{% extends "progress.html" %}
+
+{% block progress %}
+<h3>Question {{qn_number}} :</h3>
+<h4 class="quesTion">In "Gababba" island,there are two types of people-truth tellers and liars.Truth tellers always speak truth and liers always lie.I met three residents Ho,Lo,Po and asked them "who among you is the liar" ?<br>
+The following are the replies Ho: I am a truth teller<br>
+Lo: Ho is not a truth teller Po: Lo is not a liar<br>
+It is known that exactly one person among them is a liar and the other two are the two teller,then who among them is a liar?</h4>
+
+<form action="/game" method="POST" >
+	<!-- <fieldset> -->
+		<h3>Options : </h3>
+		<input type="hidden" name="qn_number" value={{qn_number}}> 
+	    <div class="funkyradio" style="text-align:center">
+	        <div class="funkyradio-primary" >
+	            <input type="radio" name="radio" id="radio1" value=1 required>
+	            <label for="radio1">Ho</label>
+	        </div>
+	        <div class="funkyradio-primary">
+	            <input type="radio" name="radio" id="radio2" value=2 >
+	            <label for="radio2">Lo</label>
+	        </div>
+	        <div class="funkyradio-primary">
+	            <input type="radio" name="radio" id="radio3" value=3 >
+	            <label for="radio3">Po</label>
+	        </div>
+	        <div class="funkyradio-primary" >
+	            <input type="radio" name="radio" id="radio4" value=4 >
+	            <label for="radio4">Cannot be determined</label>
+	        </div>
+	    </div>
+	    
+	<!-- </fieldset> -->
+
+
+{% endblock%}

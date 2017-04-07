@@ -1,0 +1,23 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
+	</head>
+	<body>		
+		<div class="clock" style="margin:2em;"></div>
+		<script type="text/javascript">
+			var clock;
+
+			$(document).ready(function() {
+				var currentDate = new Date();
+				var diff = 1488207600 - currentDate.getTime() / 1000 ;
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					 countdown: true
+				});
+			});
+		</script>
+	</body>
+</html>

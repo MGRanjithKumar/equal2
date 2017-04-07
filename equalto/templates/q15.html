@@ -1,0 +1,33 @@
+{% extends "progress.html" %}
+
+{% block progress %}
+<h3>Question {{qn_number}} :</h3>
+<h4>Two pipes A and B can fill a tank in 15 hours and 20 hours respectively while a third pipe C can empty the full tank in 25 hours.All three pipes are opened in the beginning.After 10 hours C is closed.In how much time will the tank be full?</h4>
+
+<form action="/game" method="POST" >
+	<!-- <fieldset> -->
+		<h3>Options : </h3>
+		<input type="hidden" name="qn_number" value={{qn_number}}> 
+	    <div class="funkyradio" style="text-align:center">
+	        <div class="funkyradio-primary" >
+	            <input type="radio" name="radio" id="radio1" value=1 required>
+	            <label for="radio1">12</label>
+	        </div>
+	        <div class="funkyradio-primary">
+	            <input type="radio" name="radio" id="radio2" value=2 >
+	            <label for="radio2">14</label>
+	        </div>
+	        <div class="funkyradio-primary">
+	            <input type="radio" name="radio" id="radio3" value=3 >
+	            <label for="radio3">16</label>
+	        </div>
+	        <div class="funkyradio-primary" >
+	            <input type="radio" name="radio" id="radio4" value=4 >
+	            <label for="radio4">18</label>
+	        </div>
+	    </div>
+	    
+	<!-- </fieldset> -->
+
+
+{% endblock%}

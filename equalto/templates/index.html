@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+ 
+    <!-- <dl>
+  	<dt> -->
+  		<div style="background: rgba(0,0,0,0.7);" class="mobilePageOffset jumbotron container ">
+  		<div class="">
+            <h1 style="color: white">EQUAL TO</h1>
+            <h2 style="color: white">Entry time window: 9.00 PM to 9.30 PM</h2>
+            <p class="lead"></p>
+            <p>
+				{% if atoken=="none" %}
+				<a class="btn btn-lg btn-danger" data-toggle="modal" data-target=".bs-example-modal-sm" href="" role="button">Enter the Event</a>
+				<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+					<div class="modal-dialog modal-sm" role="document">
+						<div class="modal-content">
+						<br>
+							<h3 class="text-center">Login to Continue</h3><br>
+							<form method="post">
+								<br>
+								<button class="btn btn-danger btn-lg center-block" type="submit">Google sign-in</button>
+								<br>
+							</form>
+						</div>
+					</div>
+				</div>
+				{% else %}
+				<a class="btn btn-lg btn-success" href="eventStartPage" role="button">Enter the Event</a>
+				{% endif %}
+			</p>
+			</div>
+        </div>	
+  	<!-- </dt> -->
+	<br>
+	<!-- <hr>	 -->
+	<!-- </dl> -->
+
+{% endblock%}
